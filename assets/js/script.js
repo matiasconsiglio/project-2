@@ -42,8 +42,8 @@ function circle(){
     e.style.height = (125 -1.24*points)+'px';
     e.style.width = (125 -1.24*points)+'px';
     e.style.backgroundColor = 'rgb(' + (20 +points*2) + ',' + (20 + points*2) + ',' + (20 + points*2) + ')';
-    e.style.left = randomNumber(gamePlay.clientWidth) + 'px';
-    e.style.top = randomNumber(gamePlay.clientHeight) + 'px';
+    e.style.left = (randomNumber((gamePlay.clientWidth) +1 - 50) + 50) + 'px';
+    e.style.top = (randomNumber((gamePlay.clientHeight) +1 - 50) + 50) + 'px';
     e.start = new Date().getTime();
     gamePlay.appendChild(e);
    
