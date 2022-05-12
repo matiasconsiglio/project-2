@@ -10,6 +10,7 @@
 html{
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
 }
 .circle {
     height: 125px;
@@ -27,6 +28,7 @@ html{
 .logo{
     margin: 0 50%;
     height: 30px;
+    max-width: 100%;
     
 }
 
