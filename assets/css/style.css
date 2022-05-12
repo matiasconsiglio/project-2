@@ -1,4 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;  
+    border: none;  
+}
+
 html{
     height: 100%;
 }
@@ -11,8 +19,9 @@ html{
 }
 
 .gamePlay{
-    margin: 80px 125px;
-    height: calc(100vh - 450px);
+    margin: 125px;
+    height: calc(100vh - 200px);
+    width: 100%;
 }
 
 .logo{
@@ -59,7 +68,7 @@ body{
     letter-spacing: 1px;
     cursor: pointer;
     position: inherit;
-    width: 400px;
+    width: 330px;
 }
   
 .score{
@@ -67,6 +76,7 @@ body{
     font-size: 20px;
     color: rgb(2, 44, 85);
     text-align: center;
+    margin-bottom: -50px;
 }
 
 .footer{
