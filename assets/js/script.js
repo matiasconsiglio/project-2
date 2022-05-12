@@ -41,9 +41,9 @@ function circle(){
     e.classList.add('circle');
     e.style.height = (125 -1.24*points)+'px';
     e.style.width = (125 -1.24*points)+'px';
-    e.style.backgroundColor = 'rgb(' + (2 +points*2) + ',' + (44 + points*2) + ',' + (85 + points) + ')';
-    e.style.left = (randomNumber((gamePlay.clientWidth)/1.5 +1 - 150) + 150) + 'px';
-    e.style.top = (randomNumber((gamePlay.clientHeight)/1.5 +1 - 150) + 150) + 'px';
+    e.style.backgroundColor = 'rgb(' + (20 +points*2) + ',' + (20 + points*2) + ',' + (20 + points*2) + ')';
+    e.style.left = (randomNumber((gamePlay.clientWidth)/1.1 +1 - 150) + 150) + 'px';
+    e.style.top = (randomNumber((gamePlay.clientHeight)/1.1 +1 - 150) + 150) + 'px';
     e.start = new Date().getTime();
     gamePlay.appendChild(e);
    
@@ -55,7 +55,7 @@ function circle(){
     if (circleClick === false){
         reset();}   
     }
-    ,2500 - points*20); 
+    ,2000 - points*15); 
     //if (circleClick = true){
        // ;
         //return circleClick;
