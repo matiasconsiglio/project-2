@@ -20,7 +20,7 @@ html{
 }
 
 .gamePlay{
-    height: calc(100vh - 200px);
+    height: calc(100vh - 250px);
     width: 100%;
 }
 
