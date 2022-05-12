@@ -28,7 +28,7 @@ let points = 0;
 
 function gameStart(){//function that calls in action de circle that the user need to press in the game, it will appear in time by a random number between 0 and 3000 miliseconds
     
-    gameTimespace = setTimeout(circle, randomNumber(3000 - points*20));
+    gameTimespace = setTimeout(circle, randomNumber(2000 - points*15));
     circleClick = false;
     
 }
@@ -42,8 +42,8 @@ function circle(){
     e.style.height = (125 -1.24*points)+'px';
     e.style.width = (125 -1.24*points)+'px';
     e.style.backgroundColor = 'rgb(' + (20 +points*2) + ',' + (20 + points*2) + ',' + (20 + points*2) + ')';
-    e.style.left = (randomNumber((gamePlay.clientWidth) +1 - 100)) + 'px';
-    e.style.top = (randomNumber((gamePlay.clientHeight) +1 - 200)) + 'px';
+    e.style.left = (randomNumber((gamePlay.clientWidth) +1 - 110)) + 'px';
+    e.style.top = (randomNumber((gamePlay.clientHeight) +1 - 250)) + 'px';
     e.start = new Date().getTime();
     gamePlay.appendChild(e);
 
@@ -75,7 +75,7 @@ function tap(){
     clearTimeout(chance);
     gamePlay.children[0].remove();
     points++
-    gameTimespace = setTimeout(circle, randomNumber(3000 - points*20));
+    gameTimespace = setTimeout(circle, randomNumber(2000 - points*15));
     score.innerHTML=` ${count(points)} `
 
 }
