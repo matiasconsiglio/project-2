@@ -55,7 +55,7 @@ function circle(){
     if (circleClick === false){
         reset();}   
     }
-    ,1500 - points*14); 
+    ,1000 - points*8); 
     //if (circleClick = true){
        // ;
         //return circleClick;
