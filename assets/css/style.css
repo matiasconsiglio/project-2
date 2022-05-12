@@ -11,9 +11,10 @@ html{
 }
 
 .gamePlay{
-    margin: 80px;
-    width: auto;
-    height: 600px;
+    margin: 80px 125px;
+    height: calc(100vh - 400px);
+    width: 100%;
+
 }
 
 .logo{
@@ -68,7 +69,13 @@ body{
     font-size: 20px;
     color: rgb(2, 44, 85);
 }
-  
+
+.footer{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    margin-bottom: 80px;
+}
  
   
   
