@@ -55,21 +55,19 @@ body{
 }
   
 .container{
-    margin-top: 10px; 
-    margin-left: 100px;  
-    /*display: flex;
+    margin-top: 10px;   
+    display: flex;
     align-items: center;
-    justify-content: center;*/
-    float:left;
+    justify-content: center;
+   
 }
 
 .containerTwo{
-    margin-top: 10px;
-    margin-right: 100px;    
-    /*display: flex;
+    margin-top: 10px;   
+    display: flex;
     align-items: center;
-    justify-content: center;*/
-    float:right;
+    justify-content: center;
+    
 }
 
 #button, #buttonHard{

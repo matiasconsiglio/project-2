@@ -13,7 +13,7 @@ let points=0;
 let chance={};
 let gameTimespace={};
 button.addEventListener('click', tapAndPlay);//used to listen when the user press the button to start the game.
-buttonTwo.addEventListener('click', tapAndPlayHard);
+buttonHard.addEventListener('click', tapAndPlayHard);
 
 function tapAndPlay(){//inmediate effect of pressing the play button, clean page for game, calls for gameStart function to start the game.
     score.innerHTML='0';
