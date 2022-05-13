@@ -137,15 +137,6 @@ function circleHard(){
 }
 
 /**
-* Counts the number of point
-* @param {number} points - Number of points.
-* @return {number} points - Number of points.
-*/
-function count(points){
-    return points;
-}
-
-/**
 * Function Tap, if the user clicks or taps the circle in normal difficulty then this function is called, add one point to score, clearoutTimeout for gameTimespace and chance, restart the generation of a new circle for the user to tap.
 * @param {boolean} circleClick -  define it to true. user tap de circle.
 * @param {text} score.innerHTML - update points count.
@@ -173,6 +164,15 @@ function tapHard(){
     points++;
     gameTimespace = setTimeout(circleHard, randomNumber(1500 - points*12));
     score.innerHTML=` ${count(points)} `;
+}
+
+/**
+* Counts the number of point
+* @param {number} points - Number of points.
+* @return {number} points - Number of points.
+*/
+function count(points){
+    return points;
 }
 
 /**

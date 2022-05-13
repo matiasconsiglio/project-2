@@ -28,6 +28,7 @@ html{
 .logo{
     margin: 0 50%;
     height: 30px;
+    width: 30px;
     max-width: 100%;
 }
 
@@ -51,6 +52,7 @@ body{
     text-align: center;
     margin-top: 20px;
     color: rgb(2, 44, 85);
+    size: 80px;
 }
   
 .container{
