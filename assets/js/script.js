@@ -18,13 +18,12 @@ let gameTimespace={};
 /**
 * Add event listener to both start game buttons.
 */
-button.addEventListener('click', tapAndPlay);//Create listeners for starting the game.
+button.addEventListener('click', tapAndPlay);
 buttonHard.addEventListener('click', tapAndPlayHard);
 
 /**
 * Function that calls the start of the game for normal difficulty. Clear out page for game initiation after selecting difficulty button.
 * Calls function gameStart()
-* @param {number} points - Number of points.
 */
 function tapAndPlay(){
     score.innerHTML='0';
@@ -38,7 +37,6 @@ function tapAndPlay(){
 /**
 * Function that calls the start of the game for Hard difficulty. Clear out page for game initiation after selecting difficulty button.
 * Calls function gameStartHard()
-* @param {number} points - Number of points.
 */
 function tapAndPlayHard(){
     score.innerHTML='0';
@@ -51,7 +49,7 @@ function tapAndPlayHard(){
 
 /**
 * Function that generate an integer random number between 0 and n.
-* @argument {number} n - Integer number that represents maximum time in milliseconds.
+* @param {number} n - Integer number that represents maximum time in milliseconds.
 * @returns {number} n - Integer number that represents maximum time in milliseconds.
 */
 function randomNumber(n){
@@ -61,8 +59,6 @@ function randomNumber(n){
 
 /**
 * Function for starting a normal game that calls the circle function and randomNumber function that generates a time where circle function will be activated.
-* @argument {function, function} circle, randomNumber - circle function and randomNumber function.
-* @param {boolean} circleClick - Boolean that represents either the circle in the game has been pressed, declaring it to be false.
 */
 function gameStart(){
     gameTimespace = setTimeout(circle, randomNumber(2000 - points*15));
@@ -71,8 +67,6 @@ function gameStart(){
 
 /**
 * Function for starting a Hard game that calls the circleHard function and randomNumber function that generates a time where the circle function will be activated.
-* @argument {function, function} circleHard, randomNumber - circle function and randomNumber function.
-* @param {boolean} circleClick - Boolean that represents either the circle in the game has been pressed, declaring it to be false.
 */
 function gameStartHard(){
     gameTimespace = setTimeout(circleHard, randomNumber(1500 - points*16));
@@ -81,10 +75,6 @@ function gameStartHard(){
 
 /**
 * Function circle that generates the circle the user needs to tap to continue playing, failing to tap it will cause the user to lose the game.
-* @param {element} e - Div created inside area game Div and after appended to it. This Div contains the circle and this function gives styles, conditions for the game, size, color, random position and duration before the circle disappears.
-* @listens click - calls tap function, if user tap circleClick = true, if not false.
-* @param {boolean} circleClick - Boolean that represents either the circle in the game has been pressed.
-* @param {function} chance - declares time that circle will be available for user to tap it, after that time circle disappears if user doesn't manage to click it via tap function declaring circleClick true so the game continues, this function calls reset function that restarts game.
 */
 function circle(){
     let e = document.createElement('div');
@@ -109,10 +99,6 @@ function circle(){
 
 /**
 * Function circleHard that generates the circle the user needs to tap to continue playing, failing to tap it will cause the user to lose the game.
-* @param {element} e - Div created inside area game Div and after appended to it. This Div contains the circle and this function gives styles, conditions for the game, size, color, random position and duration before the circle disappears.
-* @listens click - calls tapHard function, if user tap circleClick = true, if not false.
-* @param {boolean} circleClick - Boolean that represents either the circle in the game has been pressed.
-* @param {function} chance - declares time that circle will be available for user to tap it, after that time circle disappears if user doesn't manage to click it via tap function declaring circleClick true so the game continues, this function calls reset function that restarts game.
 */
 function circleHard(){
     let e = document.createElement('div');
@@ -137,8 +123,6 @@ function circleHard(){
 
 /**
 * Function Tap, if the user clicks or taps the circle in normal difficulty then this function is called, add one point to score, clearoutTimeout for gameTimespace and chance, restart the generation of a new circle for the user to tap.
-* @param {boolean} circleClick -  define it to true. user tap de circle.
-* @param {text} score.innerHTML - update points count.
 */
 function tap(){
     circleClick = true;
@@ -152,8 +136,6 @@ function tap(){
 
 /**
 * Function TapHard, if the user clicks or taps the circle in Hard difficulty then this function is called, add one point to score, clearoutTimeout for gameTimespace and chance, restart the generation of a new circle for the user to tap.
-* @param {boolean} circleClick -  define it to true. user tap de circle.
-* @param {text} score.innerHTML - update points count.
 */
 function tapHard(){
     circleClick = true;
@@ -176,8 +158,6 @@ function count(points){
 
 /**
 * Function reset if the user fails to tap a circle in either difficuly, this function will be called, claering out the circle from the game area, clearing all settimeout values, showing the final score then it resets the count and brings back the start buttons.
-*  @param {text} score.innerHTML - update points count to empty.
-*  @param {text} score.innerHTML - let know the user lost the game and shows the total score.
 */
 function reset(){
     gamePlay.children[0].remove();
