@@ -19,7 +19,7 @@ function tapAndPlay(){//inmediate effect of pressing the play button, clean page
     score.innerHTML='0';
     instructions.innerHTML='';
     button.style.display='none';
-    buttonTwo.style.display='none';
+    buttonHard.style.display='none';
     gameStart();
     points=0; 
 }
@@ -27,8 +27,8 @@ function tapAndPlayHard(){//inmediate effect of pressing the play button, clean 
     score.innerHTML='0';
     instructions.innerHTML='';
     button.style.display='none';
-    buttonTwo.style.display='none';
-    gameStartTwo();
+    buttonHard.style.display='none';
+    gameStartHard();
     points=0; 
 }
 
@@ -42,8 +42,8 @@ function gameStart(){//function that calls in action de circle that the user nee
     circleClick = false; 
 }
 
-function gameStartTwo(){//function that calls in action de circle that the user need to press in the game, it will appear in time by a random number between 0 and 3000 miliseconds
-    gameTimespace = setTimeout(circleTwo, randomNumber(1500 - points*16));
+function gameStartHard(){//function that calls in action de circle that the user need to press in the game, it will appear in time by a random number between 0 and 3000 miliseconds
+    gameTimespace = setTimeout(circleHard, randomNumber(1500 - points*16));
     circleClick = false; 
 }
 
@@ -66,7 +66,7 @@ function circle(){
         },1000 - points*8); 
 }
 
-function circleTwo(){
+function circleHard(){
     let e = document.createElement('div');
     e.classList.add('circle');
     e.style.height = (100 -1.3*points)+'px';
@@ -76,7 +76,7 @@ function circleTwo(){
     e.style.top = (randomNumber((gamePlay.clientHeight) +1 - 250)) + 'px';
     e.start = new Date().getTime();
     gamePlay.appendChild(e);
-    e.addEventListener('click',tapTwo)
+    e.addEventListener('click',tapHard)
     circleClick = false;
     chance = setTimeout(function (){ 
     e.style.display ='inline'; 
@@ -99,13 +99,13 @@ function tap(){
     score.innerHTML=` ${count(points)} `;
 }
 
-function tapTwo(){
+function tapHard(){
     circleClick = true;
     clearTimeout(gameTimespace);
     clearTimeout(chance);
     gamePlay.children[0].remove();
     points++;
-    gameTimespace = setTimeout(circleTwo, randomNumber(1500 - points*12));
+    gameTimespace = setTimeout(circleHard, randomNumber(1500 - points*12));
     score.innerHTML=` ${count(points)} `;
 }
 
@@ -116,5 +116,5 @@ function reset(){
     score.innerHTML='';
     instructions.innerHTML=`You Lost... Your Score: ${count(points)} `;
     button.style.display='block';
-    buttonTwo.style.display='block';
+    buttonHard.style.display='block';
 }
