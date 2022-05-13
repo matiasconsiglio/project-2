@@ -1,17 +1,16 @@
 /**
 * Declare constants in Java from Html the ones the code wants to make changes on them. 
 */
-const instructions = document.querySelector('.instructions'); //
-const scoreboard = document.querySelector('.scoreboard');
+const instructions = document.querySelector('.instructions'); 
 const gamePlay = document.querySelector('.gamePlay');
 const score = document.querySelector('.score');
 const button = document.getElementById('button');
+const buttonHard = document.getElementById('buttonHard');
 
 /**
 * Declare global variables for allowing the game to interact with html and css. 
 */
 let circleClick; //Create new global variables.
-let time=0;
 let points=0;
 let chance={};
 let gameTimespace={};
@@ -97,15 +96,15 @@ function circle(){
     e.style.top = (randomNumber((gamePlay.clientHeight) +1 - 250)) + 'px';
     e.start = new Date().getTime();
     gamePlay.appendChild(e);
-    e.addEventListener('click',tap)
+    e.addEventListener('click',tap);
     circleClick = false;
     chance = setTimeout(
         function (){ 
             e.style.display ='inline'; 
             if (circleClick === false){
-            reset();}   
-            }
-        ,1000 - points*8); 
+            reset();
+            }   
+        }, 1000 - points*8); 
 }
 
 /**
@@ -125,15 +124,15 @@ function circleHard(){
     e.style.top = (randomNumber((gamePlay.clientHeight) +1 - 250)) + 'px';
     e.start = new Date().getTime();
     gamePlay.appendChild(e);
-    e.addEventListener('click',tapHard)
+    e.addEventListener('click',tapHard);
     circleClick = false;
     chance = setTimeout(
         function (){
              e.style.display ='inline'; 
-            if (circleClick === false){
-            reset();}   
-            }
-        ,800 - points*9); 
+                if (circleClick === false){
+                reset();
+                }
+        }, 800 - points*9); 
 }
 
 /**
