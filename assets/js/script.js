@@ -18,6 +18,7 @@ function tapAndPlay(){//inmediate effect of pressing the play button, clean page
     score.innerHTML='0';
     instructions.innerHTML='';
     button.style.display='none';
+    buttonTwo.style.display='none';
     gameStart();
     points=0; 
 }
@@ -72,5 +73,6 @@ function reset(){
     score.innerHTML='';
     instructions.innerHTML=`You Lost... Your Score: ${count(points)} `;
     button.style.display='block';
+    buttonTwo.style.display='block';
 }
 
