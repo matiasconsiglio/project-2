@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
-
 *{
     margin: 0;
     padding: 0;  
@@ -12,6 +11,7 @@ html{
     width: 100%;
     overflow-x: hidden;
 }
+
 .circle {
     height: 125px;
     width: 125px;
@@ -29,7 +29,6 @@ html{
     margin: 0 50%;
     height: 30px;
     max-width: 100%;
-    
 }
 
 body{
@@ -59,7 +58,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-   
 }
 
 .containerTwo{
@@ -67,7 +65,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 
 #button, #buttonHard{
@@ -82,7 +79,6 @@ body{
     position: inherit;
     width: 300px;
     height: 60px;
-
 }
   
 .score{
