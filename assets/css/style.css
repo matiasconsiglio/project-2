@@ -72,7 +72,7 @@ body{
     float:right;
 }
 
-#button, #buttonTwo{
+#button, #buttonHard{
     color: rgb(2, 44, 85);
     border: 4px solid rgb(2, 44, 85);;
     border-radius: 50px;
